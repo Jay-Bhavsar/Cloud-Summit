@@ -41,7 +41,7 @@ html, body {
 	width: 100%;
     height: 100%;
 	background: 07071C;
-	z-index: 100000;
+	z-index: 10000000;
 	top: 0;
 	left: 0;
 	position: fixed;
@@ -52,7 +52,7 @@ html, body {
 	
 }
 .disappear{
-	animation: vanish 0s forwards;
+	animation: vanish 1s forwards;
 }
 
 @keyframes vanish{
@@ -61,6 +61,7 @@ html, body {
 		visibility: hidden;
 	}
 }
+/*
 
 .nav-link {
 	font-size: 1.1rem;
@@ -71,12 +72,13 @@ html, body {
 #mainNav {
 	padding-right: 60px;
 }
+*/
 
 .main-nav {
 	background: transparent !important;
 	padding-top: 1%;
 	padding-bottom: 1%;
-/*	color: #000;*/
+	color: #000;
 	transition: all 0.8s ease-in-out;
 /*	background-color: linear-gradient(180deg, #000000 27.36%, rgba(0, 0, 0, 0) 133.38%), linear-gradient(180deg, #04002C 0%, #001C43 100%);*/
 }
@@ -93,6 +95,16 @@ html, body {
 	width: 110%;
 	position: absolute;
 	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 0);
+	display: inline-block;
+	opacity: 1;
+}
+.mountain1 {
+	width: 110%;
+	position: absolute;
+	left: 50%;
+	
 	bottom: 0;
 	transform: translate(-50%, 0);
 	display: inline-block;
@@ -127,6 +139,7 @@ html, body {
 #back {
 	transition: margin-left 2s ease-in-out;
 }
+/*
 
 #logo {
 	position: relative;
@@ -136,6 +149,7 @@ html, body {
 	margin-bottom: 20px;
 	text-align: center;
 }
+*/
 
 .heading {
 	max-width: 60%;
@@ -309,8 +323,8 @@ html, body {
 }
 
 .neo-img{
-	width: 50%; 
-	margin-left: 25%;
+	width: 85%; 
+	margin-left: 10%;
 }
 
 .coc-above{
@@ -845,8 +859,8 @@ html, body {
 		display: inline-block !important;
 	}
 	.sch-mob{
-		width: 50%;
-		margin-left: 20%;
+		width: 90%;
+/*		margin-left: 20%;*/
 	}
 	#tim-mobile{
 		display: inline-block;
@@ -2322,76 +2336,94 @@ html, body {
 
 .sponsors_main1 {
 	width: 34%;
-	margin-bottom: 5%;
+/*	left: 20%;*/
+	margin: 0 auto;
+/*	margin-bottom: 5%;*/
 }
 
 .sponsors_main2 {
 	width: 33%;
 	margin-bottom: 5%;
+	margin: 0 auto;
 }
 
 .sponsors_main3 {
 	width: 25%;
 	margin-bottom: 5%;
+	margin: 0 auto;
 }
 
 .sponsors_main4 {
 	width: 100%;
+	margin: 0 auto;
 }
 
 .name {
-	width: 70% !important;
+	width: 60% !important;
+	margin: 0 auto;
 }
 
 .elast {
 	width: 60% !important;
+	margin: 0 auto;
 }
 
 .git {
 	width: 60% !important;
+	margin: 0 auto;
 }
 
 .devf {
 	width: 70% !important;
+	margin: 0 auto;
 }
 
 .matic {
 	width: 60% !important;
+	margin: 0 auto;
 }
 
 .polu {
 	width: 60% !important;
+	margin: 0 auto;
 }
 
 .por {
 	width: 70% !important;
+	margin: 0 auto;
 }
 
 .tezos {
 	width: 70% !important;
+	margin: 0 auto;
 }
 
 .echo {
 	width: 25% !important;
+	margin: 0 auto;
 }
 
 .patrons_row {
-	padding-left: 10%;
+	padding-left: 5%;
+	
 	padding-right: 10%;
 }
 
 .patrons1 {
 	width: 21%;
+	margin: 0 auto;
 	margin-bottom: 5%;
 }
 
 .patrons2 {
 	width: 17%;
+	margin: 0 auto;
 	margin-bottom: 5%;
 }
 
 .patrons3 {
-	width: 25%;
+	width: 21%;
+	margin: 0 auto;
 	margin-bottom: 5%;
 }
 
@@ -2648,8 +2680,8 @@ border-radius: 200px;
 }
 
 .sch {
-	width: 90%;
-	margin-left: 5%;
+	width: 100%;
+/*	margin-left: -10%;*/
 }
 
 .time-svg img {
@@ -2658,7 +2690,8 @@ border-radius: 200px;
 
 #tim-mobile {
 	display: none;
-	/* margin-bottom: 10%; */
+	 margin-top: -17%; 
+	
 }
 
 .time-head {
@@ -3975,8 +4008,305 @@ border-radius: 200px;
 #tri-cloud {
 	
 	position: absolute;
-	top: 38%;
+	top: 48%;
 	left: 0%;
 	width: 35vw;
 
 }
+
+
+/* =============================================
+ *
+ *   FIXED RESPONSIVE NAV
+ *
+ *   Credit: 
+ *   http://viljamis.com/ ( JS Plugin)
+ *   http://www.adtile.me/ (Fixed example)
+*    https://fortawesome.github.io/Font-Awesome/ (Icon font)
+ *
+ *   Free to use under the MIT License.
+ *
+ * ============================================= */
+
+/*
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section,
+summary, hgroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+*/
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+
+/* ------------------------------------------
+  RESPONSIVE NAV STYLES
+--------------------------------------------- */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 768px) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+/* ------------------------------------------
+  FIXED HEADER
+--------------------------------------------- */
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-decoration: none;
+  font-weight: bold;
+	margin-bottom: 8px;
+  line-height: 55px;
+  padding: 0;
+  color: #000;
+  float: left;
+}
+
+
+/* ------------------------------------------
+  MASK
+--------------------------------------------- */
+
+.mask {
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  transition: opacity 300ms;
+  background: rgba(0,0,0, .2);
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.android .mask {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.js-nav-active .mask {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .mask {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}
+
+
+/* ------------------------------------------
+  NAVIGATION STYLES
+--------------------------------------------- */
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.nav-collapse,
+.nav-collapse * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav-collapse,
+.nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse {
+    float: right;
+    width: auto;
+  }
+}
+
+.nav-collapse li {
+  float: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse li {
+    width: auto;
+  }
+}
+
+.nav-collapse a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-decoration:none;
+  padding: 0.7em 1em 0.7em 0;
+/*  color: #000;*/
+  width: 100%;
+  float: left;
+}
+
+.nav-collapse a:active,
+.nav-collapse .active a {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse a {
+    padding: 1.02em 2em;
+    text-align: center;
+    border-top: 0;
+    float: left;
+    margin: 0;
+  }
+  
+  .nav-collapse:last-child a {
+    padding-right: 0;
+  }
+}
+
+.nav-collapse ul ul a {
+  background: #ca3716;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse ul ul a {
+    display: none;
+  }
+}
+
+
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+
+.nav-toggle {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  text-indent: -300px;
+  position: relative;
+  overflow: hidden;
+  width: 60px;
+  height: 55px;
+  float: right;
+}
+
+.nav-toggle:before {
+  color: #fff; /* Edit this to change the icon color */
+  font: normal 28px/55px "FontAwesome"; /* Edit font-size (28px) to change the icon size */
+  text-transform: none;
+  text-align: right;
+  position: absolute;
+  content: "\f0c9"; /* Hamburger icon */
+  text-indent: 0;
+  speak: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.nav-toggle.active:before {
+  font-size: 24px;
+  content: "\f00d"; /* Close icon */
+}
+
+/* Demo style */
+
+header {
+  background: #2A2A3C;
+  opacity: 0.9;
+}
+
+.container1 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container1-bottom {
+  margin-top: 80px;
+}
+
+
+

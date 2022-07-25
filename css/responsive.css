@@ -525,7 +525,10 @@
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
-    max-width: calc(100% - 48px);
+    max-width: calc(100%);
+/*	background: #07071C;*/
+	  background: rgba(7, 7, 28,0.96);
+
   }
   .footer-box-2 li {
     width: 100%;
@@ -577,6 +580,7 @@
 @media (min-width: 30px) and (max-width: 767px) {
   .container {
     max-width: calc(100% - 24px) !important;
+	  background: rgba(7, 7, 28,0.96);
   }
   header,
   header.fixed {
