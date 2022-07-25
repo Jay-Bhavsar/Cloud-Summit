@@ -104,7 +104,6 @@ html, body {
 	width: 110%;
 	position: absolute;
 	left: 50%;
-	
 	bottom: 0;
 	transform: translate(-50%, 0);
 	display: inline-block;
@@ -323,12 +322,18 @@ html, body {
 }
 
 .neo-img{
-	width: 85%; 
-	margin-left: 10%;
+	width: 55%; 
+	margin-left: 20%;
+}
+.neo-imgg{
+	width: 80%; 
+	margin-left: 20%;
+	margin-top: -60px;
 }
 
 .coc-above{
 	margin-right: 10%;
+	margin-left: 10%;
 }
 
 .coc {
@@ -519,12 +524,12 @@ html, body {
 
 .brochure-box .link {
 	margin: 0;
-	/* position: relative; */
-	/* top:50%; */
-	/* left:50%; */
-	/* transform: translate(-50%, -50%); */
+/*	 position: relative; */
+/*	 top:50%; */
+/*	 left:50%; */
+/*	 transform: translate(-50%, -50%); */
 	width: 100%;
-	/* text-align: center; */
+/*	 text-align: center; */
 }
 
 
@@ -817,6 +822,7 @@ html, body {
 		width: 60%;
 		margin-bottom: 20px;
 	}
+	
 }
 
 @media screen and (max-width: 1200px) {
@@ -3512,10 +3518,13 @@ border-radius: 200px;
 	.footer-logo-img {
 		width: 60%;
 	}
+/*
 	.footer-wheel-img {
 		bottom: -15750px;
 	}
+*/
 }
+
 
 @media screen and (max-width: 768px) {
 	.footer {
@@ -3530,10 +3539,14 @@ border-radius: 200px;
 	.footer-title {
 		font-size: 18px;
 	}
-	.footer-info,
+	.footer-info{
+		margin-top: -35px;
+	}
 	.footer-social-links {
 		font-size: 14px;
 		position: absolute;
+		margin: 0 auto;
+		left: 10%;
 /*		margin-bottom: 20px;*/
 /*		margin-top: 20px;*/
 	}
@@ -3542,11 +3555,21 @@ border-radius: 200px;
 		margin-bottom: 10%;
 	}
 	.footer-wheel-img {
-		bottom: -16000px;
+		bottom: -7150px;
 	}
 }
 
+@media screen and (max-width: 600px) {
+	
+/*
+	.footer-wheel-img {
+		margin-top: 10%;
+		bottom: -6550px;
+	}
+*/
 
+	
+}
 @media screen and (max-width: 400px) {
 	.footer {
 		padding-top: 15%;
@@ -3570,11 +3593,16 @@ border-radius: 200px;
 	.footer-logo-img {
 		width: 50%;
 	}
+
+	
+}
+@media screen and (max-width: 500px) {
+	
 	.footer-wheel-img {
 		margin-top: 10%;
-		bottom: -13000px;
+		bottom: -6300px;
 	}
-	
+
 }
 
 .sponsor-image {
@@ -4009,7 +4037,7 @@ border-radius: 200px;
 	
 	position: absolute;
 	top: 48%;
-	left: 0%;
+	left: -5%;
 	width: 35vw;
 
 }
@@ -4227,6 +4255,7 @@ header {
 .nav-collapse a:active,
 .nav-collapse .active a {
   text-decoration: underline;
+	margin-top: 12.5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -4293,7 +4322,7 @@ header {
 /* Demo style */
 
 header {
-  background: #2A2A3C;
+  background: #040414;
   opacity: 0.9;
 }
 
@@ -4310,3 +4339,122 @@ header {
 
 
 
+footer {
+  background-color: #07071C;
+  color: #a7a7a7;
+  font-size: 16px;
+	padding: 0;
+}
+footer * {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+.row {
+/*  padding: 1em 1em;*/
+}
+
+.row.primary {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+  align-items: stretch;
+/*	width: 100%;*/
+}
+.column {
+  width: 100%;
+	margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 10em;
+}
+h3 {
+	margin-top: 10px;
+  width: 100%;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 15px;
+}
+li:not(:first-child) {
+  margin-top: 0.8em;
+}
+
+ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: #2a8ded;
+}
+.about {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+	background-color: #07071c;
+}
+input,
+.send {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.send {
+  background-color: #2a8ded;
+  color: #ffffff;
+	min-width: 50px; 
+}
+.send: hover{
+	background-color: #fff;
+	color: #000;
+}
+div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.social i {
+  color: #bac6d9;
+}
+
+.copyright {
+  padding: 0.3em 1em;
+  background-color: #345374;
+}
+.footer-menu{
+  float: left;
+    margin-top: 10px;
+}
+
+.footer-menu a{
+  color: #cfd2d6;
+  padding: 6px;
+
+  text-decoration: none;
+}
+/*.footer-menu a:hover{*/
+  color: #27bcda;
+}
+/*
+.copyright p {
+  font-size: 0.9em;
+  text-align: right;
+}
+*/
+@media screen and (max-width: 850px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+  }
+
+}
